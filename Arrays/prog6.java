@@ -3,6 +3,14 @@ package Arrays;
 import java.util.Scanner;
 
 // find the maximum product of any two different elements in the array.
+// Input:  [-10, -3, 5, 6]
+// Output: 30
+// Explanation: -10 × -3 = 30
+
+// Input:  [1, 2, 3, 4]
+// Output: 12
+// Explanation: 3 × 4
+
 public class prog6 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
