@@ -3,7 +3,7 @@ package Strings;
 //pallindrome
 public class prog2 {
     public static void main(String args[]) {
-        String s = "Hello";
+        String s = "ababa";
         String rev = new StringBuilder(s).reverse().toString();
         if (s.equals(rev)) {
             System.out.println("Pallindrome");
