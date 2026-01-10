@@ -3,6 +3,12 @@ package Arrays;
 import java.util.Scanner;
 
 //find the second largest distinct element.
+// Input:  [10, 20, 30, 40]
+// Output: 30
+
+// Input:  [5, 5, 5]
+// Output: -1
+
 public class prog7 {
 
     public static void main(String args[]) {
