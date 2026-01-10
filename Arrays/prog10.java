@@ -1,6 +1,7 @@
 package Arrays;
 //Find the Majority Element
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 // You are given an integer array arr of size N.
@@ -54,6 +55,14 @@ public class prog10 {
         }
 
         return count > arr.length / 2 ? maj : -1;
+
+        // HashMap<Integer, Integer> map = new HashMap<>();
+        // for(int x:arr){
+        // map.put(x, map.getOrDefault(x, 0) + 1);
+        // if (map.get(x) > arr.length / 2) {
+        // return x;
+        // }
+        // }return-1;
 
     }
 
