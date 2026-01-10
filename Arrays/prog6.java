@@ -1,14 +1,9 @@
 package Arrays;
-// find the  product of two max elements in the array.
 
 import java.util.Scanner;
 
-// Input:  [1, 2, 3, 4]
-// Output: 12
-// Explanation: 3 × 4
-import java.util.*;
-
-public class prog4 {
+// find the maximum product of any two different elements in the array.
+public class prog6 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -18,6 +13,8 @@ public class prog4 {
         }
         int max1 = Integer.MIN_VALUE;
         int max2 = Integer.MIN_VALUE;
+        int min1 = Integer.MAX_VALUE;
+        int min2 = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max1) {
                 max2 = max1;
@@ -26,9 +23,19 @@ public class prog4 {
                 max2 = arr[i];
 
             }
+            if (arr[i] < min1) {
+                min2 = min1;
+                min1 = arr[i];
+            } else if (arr[i] < min2 && min1 != arr[i]) {
+                min2 = arr[i];
+
+            }
 
         }
-        System.err.println(max1 * max2);
+
+        int product1 = max1 * max2;
+        int product2 = min1 * min2;
+        System.out.println(Math.max(product1, product2));
 
     }
 

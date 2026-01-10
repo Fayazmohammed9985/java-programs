@@ -1,5 +1,5 @@
 package Arrays;
-// find the minimum product of any two different elements in the array.
+// find the product of two minimum  elements in the array.
 
 // Input:  [-10, -3, 5, 6]
 // Output: 30
@@ -15,19 +15,19 @@ public class prog5 {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int max1 = Integer.MAX_VALUE;
-        int max2 = Integer.MAX_VALUE;
+        int min1 = Integer.MAX_VALUE;
+        int min2 = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < max1) {
-                max2 = max1;
-                max1 = arr[i];
-            } else if (arr[i] < max2 && max1 != arr[i]) {
-                max2 = arr[i];
+            if (arr[i] < min1) {
+                min2 = min1;
+                min1 = arr[i];
+            } else if (arr[i] < min2 && min1 != arr[i]) {
+                min2 = arr[i];
 
             }
 
         }
-        System.err.println(max1 * max2);
+        System.err.println(min1 * min2);
 
     }
 
