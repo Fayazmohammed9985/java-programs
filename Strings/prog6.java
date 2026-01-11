@@ -16,8 +16,6 @@ import java.util.Scanner;
 // 3
 
 public class prog6 {
-    String vowels = "AEIOUaeiou";
-
     public static int countmethod(String[] s) {
         int count = 0;
         String vowels = "AEIOUaeiou";
