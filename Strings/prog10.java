@@ -25,13 +25,25 @@ public class prog10 {
                     conscount++;
                 }
             }
-            int factors = 0;
-            for (int j = 1; j <= conscount; j++) {
+            // int factors = 0;
+            // for (int j = 1; j <= conscount; j++) {
+            // if (conscount % j == 0) {
+            // factors++;
+            // }
+            // }
+            // if (factors == 2) {
+            // count++;
+            // }
+            if (conscount <= 1)
+                continue;
+            boolean isPrime = true;
+            for (int j = 2; j * j <= conscount; j++) {
                 if (conscount % j == 0) {
-                    factors++;
+                    isPrime = false;
+                    break;
                 }
             }
-            if (factors == 2) {
+            if (isPrime) {
                 count++;
             }
 
