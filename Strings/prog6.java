@@ -9,6 +9,12 @@ import java.util.Scanner;
 // Output:
 // 2
 
+// Input:
+// ["hello", "aeiou", "aei123", "education"]
+
+// Output:
+// 3
+
 public class prog6 {
     String vowels = "AEIOUaeiou";
 
@@ -19,10 +25,13 @@ public class prog6 {
             int vowelcount = 0;
             int conscount = 0;
             for (int i = 0; i < word.length(); i++) {
-                if (vowels.contains(String.valueOf(word.charAt(i)))) {
-                    vowelcount++;
-                } else {
-                    conscount++;
+                char ch = word.charAt(i);
+                if (Character.isLetter(ch)) {
+                    if (vowels.contains(String.valueOf(ch))) {
+                        vowelcount++;
+                    } else {
+                        conscount++;
+                    }
                 }
             }
             if (vowelcount > conscount) {
