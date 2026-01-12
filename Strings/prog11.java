@@ -14,14 +14,7 @@ import java.util.HashSet;
 // Output: "acdb"
 
 public class prog11 {
-    public static String smallstring(String s){
-        HashSet<Charecter> hs=new HashSet<>();
-        for(int i=0;i<s.length();i++){
-            hs.add(s.charAt(i));
-        }
-        for(char ch:hs){
-            if()
-        }   
+    public static String smallstring(String s) {
 
     }
 
