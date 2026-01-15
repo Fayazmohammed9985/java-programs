@@ -1,0 +1,33 @@
+package Strings;
+
+// Longest Balanced Substring of 0s and 1s
+import java.util.HashMap;
+
+public class prog14 {
+
+    public static int longestBalanced(String s) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
+        int maxLen = 0;
+        map.put(0, -1);
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '0') {
+                sum -= 1;
+            } else {
+                sum += 1;
+            }
+            if (map.containsKey(sum)) {
+                maxLen = Math.max(maxLen, i - map.get(sum));
+            } else {
+                map.put(sum, i);
+            }
+        }
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        String s = "00110";
+        System.out.println(longestBalanced(s));
+    }
+}
