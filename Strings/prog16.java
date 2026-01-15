@@ -16,12 +16,14 @@ public class prog16 {
         String[] arr = { "abc", "aa", "ab", "aabbcc" };
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
-            int d1 = distinctCount(arr[i]);
-            int d2 = distinctCount(arr[i + 1]);
-            if (d1 > d2) {
-                String temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
+            for (int j = 0; j < n - i - 1; j++) {
+                int d1 = distinctCount(arr[j]);
+                int d2 = distinctCount(arr[j + 1]);
+                if (d1 > d2) {
+                    String temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
 
