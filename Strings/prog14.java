@@ -6,10 +6,10 @@ import java.util.HashMap;
 public class prog14 {
 
     public static int longestBalanced(String s) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();
         int sum = 0;
         int maxLen = 0;
-        map.put(0, -1);
+        hm.put(0, -1);
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (ch == '0') {
@@ -17,10 +17,10 @@ public class prog14 {
             } else {
                 sum += 1;
             }
-            if (map.containsKey(sum)) {
-                maxLen = Math.max(maxLen, i - map.get(sum));
+            if (hm.containsKey(sum)) {
+                maxLen = Math.max(maxLen, i - hm.get(sum));
             } else {
-                map.put(sum, i);
+                hm.put(sum, i);
             }
         }
         return maxLen;
