@@ -11,6 +11,19 @@
 
 // Output
 // 1 2 3 4 6 12
+
 public class p3 {
+    public static void main(String[] args) {
+        int num = -10;
+        if (num == 0) {
+            System.out.println("No Factor");
+        }
+        num = Math.abs(num);
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
 
 }
