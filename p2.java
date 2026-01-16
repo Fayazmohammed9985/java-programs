@@ -22,7 +22,26 @@
 // Sample Output 1
 // 13.33
 // 17.64
+import java.util.*;
 
 public class p2 {
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double diesel = sc.nextInt();
+        double distance = sc.nextInt();
+        double liters = 0;
+        double us = 0;
+        if (diesel <= 0 || distance <= 0) {
+            System.out.print("Invalid Input");
+        }
+        liters = (diesel / distance) * 100;
+        double gallons = diesel * 0.26;
+        double miles = distance * 0.62;
+        us = miles / gallons;
+
+        System.out.println(liters);
+        System.out.println(us);
+
+    }
 }
