@@ -12,6 +12,24 @@
 // input3 = {5, 1, 5}
 // Output
 // 2
+import java.util.*;
+
 public class p1 {
+    public static void main(String[] args) {
+        int i1 = 3;
+        int i2 = 9;
+        int[] weights = { 5, 1, 5 };
+        int count = 0;
+        int sum = 0;
+        Arrays.sort(weights);
+        for (int i = 0; i < weights.length; i++) {
+            sum += weights[i];
+            if (sum <= i2) {
+                count++;
+            }
+        }
+        System.out.println(count);
+
+    }
 
 }
