@@ -9,6 +9,7 @@
 // given a value other than 'k' or 'q'
 // , the output should be "Invalid Input". The ticket cost should
 // be printed exactly to two decimal places.
+
 // Approach: Take inputs: number of tickets, ticket type (k or q), whether refreshments are
 // needed, and if a coupon is submitted. Validate ticket number and ticket type. Calculate base
 // cost, add refreshment charges if needed, apply a 10% discount if tickets >20, then apply a
@@ -31,7 +32,44 @@
 
 // Output
 // Minimum of 5 and Maximum of 40 Tickets
+import java.util.*;
 
 public class p4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String t = sc.next();
+        String r = sc.next();
+        String c = sc.next();
+        double total = 0;
+        if (n < 5 || n > 40) {
+            System.out.println("Minimum of 5 and Maximum of 40 Tickets");
+            return;
+
+        }
+        if (t.equals("k")) {
+            total = n * 75;
+
+        } else if (t.equals("q")) {
+            total = n * 150;
+        } else {
+            System.out.println("Invalid Input");
+            return;
+
+        }
+        if (r.equals("y")) {
+            int refcost = n * 50;
+            total = total + refcost;
+        }
+        if (n > 20) {
+            total = total - (total * 0.10);
+        }
+        if (c.equals("y")) {
+
+            total = total - (total * 0.02);
+        }
+        System.out.println(total);
+
+    }
 
 }
