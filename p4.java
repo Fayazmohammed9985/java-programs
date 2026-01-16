@@ -68,7 +68,7 @@ public class p4 {
 
             total = total - (total * 0.02);
         }
-        System.out.println(total);
+        System.out.printf("%.2f", total);
 
     }
 
